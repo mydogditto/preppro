@@ -1,0 +1,13 @@
+# Prep Pro SAT Edition - Design Rationale
+
+## Overview
+
+Prep Pro SAT Edition is designed around the principle of "motivational without overwhelming." The interface uses a vibrant, multi-color system where each SAT section has its own color identity—purple for practice tests, orange for daily practice, blue for Reading & Writing, and green for Math. This color-coding creates intuitive visual landmarks that reduce cognitive load and make navigation feel natural. The glassmorphism effects (frosted glass cards with `backdrop-blur-sm`) and subtle micro-animations (hover scaling, pulsing indicators) create a modern, premium feel while maintaining focus on the core study experience. Every design element aims to balance high information density with visual clarity, ensuring students can quickly assess their progress without feeling overwhelmed.
+
+## Gamification & Psychology
+
+The design leverages game mechanics to drive engagement while minimizing test anxiety. The leaderboard lives on its own dedicated page rather than being constantly visible, giving users control over when they engage with competition. Progress bars use gradients to suggest forward momentum, emojis (🔥 for streaks, 🎉 for achievements, 🏆 for competition) add personality and reduce stress, and the Target Schools section color-codes reach/target/safety schools to set realistic expectations. Clippy, the AI assistant designed as a nostalgic paperclip, provides supportive help without being intrusive—clicking to open gives users agency. The dashboard hierarchy mirrors a student's mental journey: immediate feedback (stats cards) → motivation (target schools) → actionable next steps (quick actions) → detailed analysis (progress breakdown).
+
+## Technical & Structural Decisions
+
+Built with Next.js 14, TypeScript, and Tailwind CSS, the architecture prioritizes modularity and future scalability. The component structure separates concerns cleanly—Header handles navigation, StatsCards display metrics, Sidebar contains supporting widgets—making features easy to add or modify. We chose a desktop-first responsive strategy since SAT studying primarily happens at desks, though the card-based layout stacks gracefully on mobile. The consistent design system (spacing scale of 2/3/4/6/8, border-radius of lg/xl, transition durations of 200ms for interactions and 1000ms for data changes) creates visual rhythm that feels cohesive even at a glance. The navigation structure keeps five main tabs—Dashboard, Practice Tests, Study Materials, Progress, and Leaderboard—balancing feature discoverability with decision simplicity.
